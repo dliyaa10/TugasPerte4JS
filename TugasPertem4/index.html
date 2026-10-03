@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Manajemen Transportasi</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        input,
+        select,
+        button {
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .judul-form {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Sistem Manajemen Transportasi</h1>
+
+        <h2 class="judul-form">Data Pelanggan</h2>
+
+        <form id="formPelanggan">
+
+            <input 
+                type="text" 
+                id="nama" 
+                placeholder="Nama Pelanggan" 
+                required
+            >
+
+            <input 
+                type="text" 
+                id="nomorTelepon" 
+                placeholder="Nomor Telepon" 
+                required
+            >
+
+            <select id="kendaraan" required>
+                <option value="">-- Pilih Kendaraan --</option>
+                <option value="Mobil">Mobil</option>
+                <option value="Motor">Motor</option>
+                <option value="Bus">Bus</option>
+                <option value="Truk">Truk</option>
+            </select>
+
+            <button type="submit">Catat Penyewaan</button>
+
+        </form>
+
+        <h2>Daftar Pelanggan yang Menyewa Kendaraan</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Pelanggan</th>
+                    <th>Nomor Telepon</th>
+                    <th>Kendaraan yang Disewa</th>
+                </tr>
+            </thead>
+
+            <tbody id="daftarPelanggan">
+                <!-- Data pelanggan akan ditampilkan di sini -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
